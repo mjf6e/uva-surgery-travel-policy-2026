@@ -9,16 +9,13 @@
   :root {
     --navy: #232D4B;
     --navy-dark: #161f36;
-    --navy-mid: #2d3a5e;
     --orange: #E57200;
-    --orange-light: #f08520;
     --cream: #F9F6F1;
     --cream-dark: #f0ece4;
     --slate: #5a6478;
     --text: #1a1f2e;
     --text-muted: #6b7280;
     --border: #ddd8ce;
-    --white: #ffffff;
     --green: #2d7d46;
     --green-bg: #eaf4ee;
     --amber: #92570a;
@@ -26,211 +23,40 @@
     --red: #b91c1c;
     --red-bg: #fef2f2;
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    min-height: 100vh;
-    line-height: 1.6;
-  }
-
-  header {
-    background: var(--navy-dark);
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-  }
-
-  .header-top {
-    background: var(--navy);
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border-bottom: 4px solid var(--orange);
-  }
-
-  .uva-logo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    text-decoration: none;
-  }
-
-  .uva-monogram {
-    width: 56px;
-    height: 56px;
-    background: var(--orange);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: white;
-    letter-spacing: -1px;
-    flex-shrink: 0;
-  }
-
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  header { background: var(--navy-dark); padding: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+  .header-top { background: var(--navy); padding: 20px 40px; display: flex; align-items: center; gap: 20px; border-bottom: 4px solid var(--orange); }
+  .uva-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .uva-monogram { height: 56px; background: var(--orange); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Libre Baskerville', serif; font-size: 15px; font-weight: 700; color: white; letter-spacing: 0.02em; padding: 0 14px; flex-shrink: 0; }
   .header-title-group { flex: 1; }
-
-  .header-super {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    line-height: 1;
-  }
-
-  .header-title {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 22px;
-    color: white;
-    line-height: 1.3;
-    margin-top: 4px;
-  }
-
-  .version-badge {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.6);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 20px;
-    white-space: nowrap;
-  }
-
-  nav {
-    background: var(--navy-dark);
-    padding: 0 40px;
-    display: flex;
-    gap: 2px;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
+  .header-super { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); line-height: 1; }
+  .header-title { font-family: 'Libre Baskerville', serif; font-size: 22px; color: white; line-height: 1.3; margin-top: 4px; }
+  .version-badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.6); font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+  nav { background: var(--navy-dark); padding: 0 40px; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
   nav::-webkit-scrollbar { display: none; }
-
-  .tab {
-    padding: 15px 22px;
-    font-size: 14px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.5);
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    white-space: nowrap;
-    transition: all 0.2s;
-    letter-spacing: 0.02em;
-  }
+  .tab { padding: 15px 22px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.5); cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; transition: all 0.2s; letter-spacing: 0.02em; }
   .tab:hover { color: rgba(255,255,255,0.85); }
   .tab.active { color: white; border-bottom-color: var(--orange); }
-
-  main {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
-
+  main { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
   .section { display: none; }
   .section.active { display: block; }
-
-  .hero {
-    background: var(--navy);
-    border-radius: 12px;
-    padding: 48px 52px;
-    color: white;
-    margin-bottom: 32px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -40px; right: -40px;
-    width: 260px; height: 260px;
-    background: radial-gradient(circle, rgba(229,114,0,0.28) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .hero-label {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--orange);
-    margin-bottom: 10px;
-  }
-  .hero h1 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 14px;
-  }
-  .hero p {
-    font-size: 16px;
-    color: rgba(255,255,255,0.78);
-    max-width: 600px;
-    line-height: 1.7;
-  }
-
-  .quick-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 14px;
-    margin-bottom: 32px;
-  }
-
-  .quick-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    transition: box-shadow 0.2s, transform 0.2s;
-    cursor: pointer;
-  }
+  .hero { background: var(--navy); border-radius: 12px; padding: 48px 52px; color: white; margin-bottom: 32px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -40px; right: -40px; width: 260px; height: 260px; background: radial-gradient(circle, rgba(229,114,0,0.28) 0%, transparent 70%); border-radius: 50%; }
+  .hero-label { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+  .hero h1 { font-family: 'Libre Baskerville', serif; font-size: 34px; font-weight: 700; line-height: 1.25; margin-bottom: 14px; }
+  .hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 600px; line-height: 1.7; }
+  .quick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 32px; }
+  .quick-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 6px; transition: box-shadow 0.2s, transform 0.2s; cursor: pointer; }
   .quick-card:hover { box-shadow: 0 4px 20px rgba(35,45,75,0.12); transform: translateY(-2px); }
   .quick-card-icon { font-size: 22px; margin-bottom: 4px; }
   .quick-card-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
   .quick-card-value { font-family: 'Libre Baskerville', serif; font-size: 22px; font-weight: 700; color: var(--navy); }
   .quick-card-sub { font-size: 12px; color: var(--text-muted); }
-
-  .section-title {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 22px;
-    color: var(--navy);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+  .section-title { font-family: 'Libre Baskerville', serif; font-size: 22px; color: var(--navy); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
   .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  .policy-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    margin-bottom: 16px;
-    overflow: hidden;
-  }
-  .policy-card-header {
-    padding: 18px 22px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.15s;
-  }
+  .policy-card { background: white; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 16px; overflow: hidden; }
+  .policy-card-header { padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none; transition: background 0.15s; }
   .policy-card-header:hover { background: #fafaf8; }
   .policy-card-title { font-weight: 600; font-size: 15px; color: var(--navy); display: flex; align-items: center; gap: 10px; }
   .policy-card-tag { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; background: var(--amber-bg); color: var(--amber); }
@@ -239,7 +65,6 @@
   .policy-card.open .chevron { transform: rotate(180deg); }
   .policy-card-body { display: none; padding: 0 22px 22px; border-top: 1px solid var(--border); }
   .policy-card.open .policy-card-body { display: block; }
-
   .policy-list { list-style: none; padding: 0; margin-top: 14px; }
   .policy-list li { padding: 7px 0 7px 22px; font-size: 14px; color: #374151; border-bottom: 1px solid #f3f0ea; position: relative; line-height: 1.55; }
   .policy-list li:last-child { border-bottom: none; }
@@ -247,14 +72,12 @@
   .policy-list.nested { margin-left: 16px; margin-top: 6px; margin-bottom: 2px; }
   .policy-list.nested li::before { color: var(--slate); }
   .policy-list.nested li { font-size: 13px; border-bottom: none; padding: 3px 0 3px 20px; }
-
   .alert { border-radius: 8px; padding: 13px 16px; font-size: 13.5px; margin-bottom: 14px; display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; }
   .alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
   .alert.orange { background: var(--amber-bg); color: var(--amber); border: 1px solid #f5d79e; }
   .alert.green { background: var(--green-bg); color: #1e5c33; border: 1px solid #a7d8b5; }
   .alert.red { background: var(--red-bg); color: var(--red); border: 1px solid #fca5a5; }
   .alert.navy { background: #eef0f6; color: var(--navy); border: 1px solid #c5cbdc; }
-
   .funding-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 14px; }
   .funding-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
   .funding-table th:first-child { border-radius: 8px 0 0 0; }
@@ -263,7 +86,6 @@
   .funding-table tr:last-child td { border-bottom: none; }
   .funding-table tr:nth-child(even) td { background: #fafaf8; }
   .funding-amount { font-weight: 700; color: var(--green); white-space: nowrap; }
-
   .timeline { margin-top: 14px; display: flex; flex-direction: column; gap: 0; }
   .timeline-item { display: flex; gap: 16px; padding-bottom: 20px; position: relative; }
   .timeline-item:last-child { padding-bottom: 0; }
@@ -272,7 +94,6 @@
   .timeline-content { padding-top: 5px; flex: 1; }
   .timeline-content strong { font-size: 14px; color: var(--navy); display: block; margin-bottom: 3px; }
   .timeline-content span { font-size: 13px; color: var(--text-muted); }
-
   .contacts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 14px; }
   .contact-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
   .contact-area { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; }
@@ -280,9 +101,7 @@
   .contact-name.multi { font-size: 13px; }
   .contact-card a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--orange); transition: color 0.15s; }
   .contact-card a:hover { color: var(--orange); }
-
   .deadline-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--red-bg); color: var(--red); border: 1px solid #fca5a5; border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600; margin-top: 10px; }
-
   @media (max-width: 600px) {
     .header-top { padding: 12px 20px; }
     nav { padding: 0 20px; }
@@ -291,7 +110,6 @@
     .hero h1 { font-size: 20px; }
     .quick-grid { grid-template-columns: repeat(2, 1fr); }
   }
-
   .section.active > * { animation: fadeUp 0.3s ease both; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   .section.active > *:nth-child(2) { animation-delay: 0.04s; }
@@ -300,11 +118,10 @@
 </style>
 </head>
 <body>
-
 <header>
   <div class="header-top">
     <div class="uva-logo">
-      <div class="uva-monogram" style="width:auto;padding:0 14px;font-size:15px;letter-spacing:0.02em;border-radius:6px;">University of Virginia</div>
+      <div class="uva-monogram">University of Virginia</div>
       <div class="header-title-group">
         <div class="header-super">University of Virginia · Department of Surgery</div>
         <div class="header-title">Categorical Resident Travel Policy</div>
@@ -323,511 +140,157 @@
     <div class="tab" data-section="policy-doc">Policy Document</div>
   </nav>
 </header>
-
 <main>
-
-  <!-- OVERVIEW -->
   <section class="section active" id="overview">
-    <div class="hero">
-      <div class="hero-label">Resident Resource</div>
-      <h1>Surgery Resident Travel Policy</h1>
-      <p>This policy covers travel reimbursement for categorical residents attending or presenting at regional and national meetings, professional development workshops, and career development activities.</p>
-    </div>
-
+    <div class="hero"><div class="hero-label">Resident Resource</div><h1>Surgery Resident Travel Policy</h1><p>This policy covers travel reimbursement for categorical residents attending or presenting at regional and national meetings, professional development workshops, and career development activities.</p></div>
     <div class="quick-grid">
-      <div class="quick-card" onclick="showSection('funding')">
-        <div class="quick-card-icon">💰</div>
-        <div class="quick-card-label">Dept. Contribution</div>
-        <div class="quick-card-value">$1,500</div>
-        <div class="quick-card-sub">Clinical years (yrs 2–6)</div>
-      </div>
-      <div class="quick-card" onclick="showSection('funding')">
-        <div class="quick-card-icon">🔬</div>
-        <div class="quick-card-label">T32 Annual Limit</div>
-        <div class="quick-card-value">$2,000</div>
-        <div class="quick-card-sub">Research year residents</div>
-      </div>
-      <div class="quick-card" onclick="showSection('funding')">
-        <div class="quick-card-icon">🎓</div>
-        <div class="quick-card-label">Prof. Development</div>
-        <div class="quick-card-value">$2,000</div>
-        <div class="quick-card-sub">Total allotment, yrs 3–5</div>
-      </div>
-      <div class="quick-card" onclick="showSection('rules')">
-        <div class="quick-card-icon">📅</div>
-        <div class="quick-card-label">Book Travel</div>
-        <div class="quick-card-value">45 Days</div>
-        <div class="quick-card-sub">Prior to departure</div>
-      </div>
-      <div class="quick-card" onclick="showSection('rules')">
-        <div class="quick-card-icon">🧾</div>
-        <div class="quick-card-label">Submit Receipts</div>
-        <div class="quick-card-value">25 Days</div>
-        <div class="quick-card-sub">After return date</div>
-      </div>
-      <div class="quick-card" onclick="showSection('rules')">
-        <div class="quick-card-icon">🏨</div>
-        <div class="quick-card-label">Max Hotel Nights</div>
-        <div class="quick-card-value">2 Nights</div>
-        <div class="quick-card-sub">Clinical year presenters</div>
-      </div>
+      <div class="quick-card" onclick="showSection('funding')"><div class="quick-card-icon">💰</div><div class="quick-card-label">Dept. Contribution</div><div class="quick-card-value">$1,500</div><div class="quick-card-sub">Clinical years (yrs 2–6)</div></div>
+      <div class="quick-card" onclick="showSection('funding')"><div class="quick-card-icon">🔬</div><div class="quick-card-label">T32 Annual Limit</div><div class="quick-card-value">$2,000</div><div class="quick-card-sub">Research year residents</div></div>
+      <div class="quick-card" onclick="showSection('funding')"><div class="quick-card-icon">🎓</div><div class="quick-card-label">Prof. Development</div><div class="quick-card-value">$2,000</div><div class="quick-card-sub">Total allotment, yrs 3–5</div></div>
+      <div class="quick-card" onclick="showSection('rules')"><div class="quick-card-icon">📅</div><div class="quick-card-label">Book Travel</div><div class="quick-card-value">45 Days</div><div class="quick-card-sub">Prior to departure</div></div>
+      <div class="quick-card" onclick="showSection('rules')"><div class="quick-card-icon">🧾</div><div class="quick-card-label">Submit Receipts</div><div class="quick-card-value">25 Days</div><div class="quick-card-sub">After return date</div></div>
+      <div class="quick-card" onclick="showSection('rules')"><div class="quick-card-icon">🏨</div><div class="quick-card-label">Max Hotel Nights</div><div class="quick-card-value">2 Nights</div><div class="quick-card-sub">Clinical year presenters</div></div>
     </div>
-
     <div class="section-title">Who This Policy Covers</div>
-
-    <div class="policy-card open">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🩺 Resident Presenting Research</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <div class="alert navy"><div class="alert-icon">ℹ️</div> The PI must review and approve all abstracts <strong>before</strong> submission. Discuss travel funding availability with your PI first.</div>
-        <ul class="policy-list">
-          <li>All abstracts must be approved by the PI prior to conference submission.</li>
-          <li>T32 research year residents: up to <strong>$2,000/year</strong> from T32 funds; mentor covers any excess.</li>
-          <li>Non-T32 research year residents: grant-funded when available; department contributes up to <strong>$1,500/year</strong> otherwise; PI covers the rest.</li>
-          <li>Clinical years (2–6): department contributes up to <strong>$1,500 for one trip per year</strong> if presenting, on panels, or serving on committees. PI funds additional trips.</li>
-          <li>Medical student travel is covered exclusively by the PI.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">📚 Resident Professional Development <span class="policy-card-tag green">Gen Surgery / Int'l Thoracic / Int'l Vascular</span></div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <ul class="policy-list">
-          <li><strong>$2,000 total allotment</strong> to be used during the 3rd, 4th, or 5th year.</li>
-          <li>Timing must be discussed with and approved by the Program Director and Department Leadership.</li>
-          <li>Travel application must be submitted to the Program Coordinator <em>before</em> booking any travel.</li>
-          <li>Residents are encouraged to apply for <strong>AAS society travel awards</strong>. If awarded, the department will also contribute up to <strong>$1,000</strong> (once per resident).</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🏥 Fellowship Professional Development <span class="policy-card-tag">Thoracic / Vascular / Transplant</span></div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <ul class="policy-list">
-          <li><strong>$2,000 total</strong> to be used once during fellowship for travel or professional development.</li>
-          <li>Timing requires discussion with and approval from the Program Director and Department Leadership.</li>
-          <li>Travel application must be submitted to the Program Coordinator before booking.</li>
-          <li>Clinical instructor travel is covered by the respective Division and handled by division support staff, subject to faculty sponsor approval.</li>
-        </ul>
-      </div>
-    </div>
+    <div class="policy-card open"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🩺 Resident Presenting Research</div><span class="chevron">▼</span></div><div class="policy-card-body"><div class="alert navy"><div class="alert-icon">ℹ️</div> The PI must review and approve all abstracts <strong>before</strong> submission. Discuss travel funding availability with your PI first.</div><ul class="policy-list"><li>All abstracts must be approved by the PI prior to conference submission.</li><li>T32 research year residents: up to <strong>$2,000/year</strong> from T32 funds; mentor covers any excess.</li><li>Non-T32 research year residents: grant-funded when available; department contributes up to <strong>$1,500/year</strong> otherwise; PI covers the rest.</li><li>Clinical years (2–6): department contributes up to <strong>$1,500 for one trip per year</strong> if presenting, on panels, or serving on committees. PI funds additional trips.</li><li>Medical student travel is covered exclusively by the PI.</li></ul></div></div>
+    <div class="policy-card"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">📚 Resident Professional Development <span class="policy-card-tag green">Gen Surgery / Int'l Thoracic / Int'l Vascular</span></div><span class="chevron">▼</span></div><div class="policy-card-body"><ul class="policy-list"><li><strong>$2,000 total allotment</strong> to be used during the 3rd, 4th, or 5th year.</li><li>Timing must be discussed with and approved by the Program Director and Department Leadership.</li><li>Travel application must be submitted to the Program Coordinator <em>before</em> booking any travel.</li><li>Residents are encouraged to apply for <strong>AAS society travel awards</strong>. If awarded, the department will also contribute up to <strong>$1,000</strong> (once per resident).</li></ul></div></div>
+    <div class="policy-card"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🏥 Fellowship Professional Development <span class="policy-card-tag">Thoracic / Vascular / Transplant</span></div><span class="chevron">▼</span></div><div class="policy-card-body"><ul class="policy-list"><li><strong>$2,000 total</strong> to be used once during fellowship for travel or professional development.</li><li>Timing requires discussion with and approval from the Program Director and Department Leadership.</li><li>Travel application must be submitted to the Program Coordinator before booking.</li><li>Clinical instructor travel is covered by the respective Division and handled by division support staff, subject to faculty sponsor approval.</li></ul></div></div>
   </section>
 
-  <!-- FUNDING -->
   <section class="section" id="funding">
-    <div class="hero">
-      <div class="hero-label">Funding Details</div>
-      <h1>Funding Limits at a Glance</h1>
-      <p>Understand what the department covers vs. what requires PI or personal funding.</p>
-    </div>
-
-    <table class="funding-table">
-      <thead>
-        <tr>
-          <th>Resident Category</th>
-          <th>Funding Source</th>
-          <th>Dept. Limit</th>
-          <th>Overage Responsibility</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Research Year — T32 Grant</strong></td><td>T32 grant funds</td><td class="funding-amount">$2,000/yr</td><td>Mentor / PI covers excess</td></tr>
-        <tr><td><strong>Research Year — Non-T32</strong></td><td>Grant (if available), then dept.</td><td class="funding-amount">$1,500/yr</td><td>PI covers excess</td></tr>
-        <tr><td><strong>Clinical Years 2–6</strong> (presenting / panel)</td><td>Department</td><td class="funding-amount">$1,500/trip</td><td>PI or resident for additional trips</td></tr>
-        <tr><td><strong>Prof. Dev. — Gen / Int'l Thoracic / Int'l Vascular</strong></td><td>Department</td><td class="funding-amount">$2,000 total</td><td>Resident (used in yrs 3–5)</td></tr>
-        <tr><td><strong>Prof. Dev. + AAS Award</strong></td><td>AAS + Department supplement</td><td class="funding-amount">+$1,000</td><td>One-time department supplement</td></tr>
-        <tr><td><strong>Fellowship (Thoracic / Vascular / Transplant)</strong></td><td>Department / Division</td><td class="funding-amount">$2,000 total</td><td>Used once during fellowship</td></tr>
-        <tr><td><strong>Medical Students</strong></td><td>PI exclusively</td><td>—</td><td>PI covers all costs</td></tr>
-      </tbody>
-    </table>
-
+    <div class="hero"><div class="hero-label">Funding Details</div><h1>Funding Limits at a Glance</h1><p>Understand what the department covers vs. what requires PI or personal funding.</p></div>
+    <table class="funding-table"><thead><tr><th>Resident Category</th><th>Funding Source</th><th>Dept. Limit</th><th>Overage Responsibility</th></tr></thead><tbody>
+      <tr><td><strong>Research Year — T32 Grant</strong></td><td>T32 grant funds</td><td class="funding-amount">$2,000/yr</td><td>Mentor / PI covers excess</td></tr>
+      <tr><td><strong>Research Year — Non-T32</strong></td><td>Grant (if available), then dept.</td><td class="funding-amount">$1,500/yr</td><td>PI covers excess</td></tr>
+      <tr><td><strong>Clinical Years 2–6</strong> (presenting / panel)</td><td>Department</td><td class="funding-amount">$1,500/trip</td><td>PI or resident for additional trips</td></tr>
+      <tr><td><strong>Prof. Dev. — Gen / Int'l Thoracic / Int'l Vascular</strong></td><td>Department</td><td class="funding-amount">$2,000 total</td><td>Resident (used in yrs 3–5)</td></tr>
+      <tr><td><strong>Prof. Dev. + AAS Award</strong></td><td>AAS + Department supplement</td><td class="funding-amount">+$1,000</td><td>One-time department supplement</td></tr>
+      <tr><td><strong>Fellowship (Thoracic / Vascular / Transplant)</strong></td><td>Department / Division</td><td class="funding-amount">$2,000 total</td><td>Used once during fellowship</td></tr>
+      <tr><td><strong>Medical Students</strong></td><td>PI exclusively</td><td>—</td><td>PI covers all costs</td></tr>
+    </tbody></table>
     <div style="margin-top:24px;">
       <div class="section-title">Important Funding Notes</div>
-      <div class="alert orange"><div class="alert-icon">⚠️</div><div> <strong>Wage requirement:</strong> If the resident is not paid a wage or stipend from the grant, travel expenses <em>cannot</em> be paid from that grant.</div></div>
+      <div class="alert orange"><div class="alert-icon">⚠️</div><div><strong>Wage requirement:</strong> If the resident is not paid a wage or stipend from the grant, travel expenses <em>cannot</em> be paid from that grant.</div></div>
       <div class="alert navy"><div class="alert-icon">📋</div> <strong>Additional trips (clinical years):</strong> Residents may attend more than one meeting per year, but any additional trips beyond the one department-funded trip must be funded by the PI.</div>
       <div class="alert green"><div class="alert-icon">🏆</div> <strong>AAS Awards:</strong> Apply for AAS society travel awards to supplement professional development funding. The department will contribute an additional $1,000 if you receive an AAS award (once per resident).</div>
     </div>
   </section>
 
-  <!-- RULES -->
   <section class="section" id="rules">
-    <div class="hero">
-      <div class="hero-label">Travel Rules</div>
-      <h1>Booking, Lodging &amp; Expense Rules</h1>
-      <p>Follow these guidelines carefully — non-compliant expenses may not be reimbursed.</p>
-    </div>
-
+    <div class="hero"><div class="hero-label">Travel Rules</div><h1>Booking, Lodging &amp; Expense Rules</h1><p>Follow these guidelines carefully — non-compliant expenses may not be reimbursed.</p></div>
     <div class="alert navy" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span style="font-size:22px;">📋</span>
-        <div>
-          <div style="font-weight:600;font-size:14px;color:var(--navy);">Resident, Fellow &amp; Clinical Instructor Travel Application</div>
-          <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Official form — must be completed and approved prior to booking any travel</div>
-        </div>
-      </div>
-      <a download="Resident_Travel_Application.pdf"
-         href="Resident_Travel_Application_2022-11-04.pdf"
-         style="display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:white;text-decoration:none;padding:9px 18px;border-radius:7px;font-size:13px;font-weight:600;white-space:nowrap;transition:background 0.2s;"
-         onmouseenter="this.style.background='var(--orange)'"
-         onmouseleave="this.style.background='var(--navy)'">
-        ⬇ Download Form
-      </a>
+      <div style="display:flex;align-items:center;gap:10px;"><span style="font-size:22px;">📋</span><div><div style="font-weight:600;font-size:14px;color:var(--navy);">Resident, Fellow &amp; Clinical Instructor Travel Application</div><div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Official form — must be completed and approved prior to booking any travel</div></div></div>
+      <a id="app-download-link" download="Resident_Travel_Application.pdf" href="#" style="display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:white;text-decoration:none;padding:9px 18px;border-radius:7px;font-size:13px;font-weight:600;white-space:nowrap;transition:background 0.2s;" onmouseenter="this.style.background='var(--orange)'" onmouseleave="this.style.background='var(--navy)'">⬇ Download Form</a>
     </div>
-
     <div class="section-title">Booking Requirements</div>
-
-    <div class="policy-card open">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">✈️ Flights &amp; Booking</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <div class="alert red"><div class="alert-icon">🚫</div><div> Travel will <strong>not be allowed</strong> if requested fewer than 2 weeks before departure (unless approved by Program Director or PI).</div></div>
-        <ul class="policy-list">
-          <li>All travel must be booked <strong>at least 45 days prior</strong> to departure.</li>
-          <li>Clinical resident travel is booked by <strong>program coordinators</strong>.</li>
-          <li>Research resident travel is booked by the <strong>administrative assistant for the Division of Surgical Science</strong>.</li>
-          <li>Flight change charges will <strong>not</strong> be reimbursed unless approved by the Program Director.</li>
-          <li>If you extend a trip personally, you must attach a cost comparison of compliant vs. personal-stay flights to your expense report.</li>
-        </ul>
-        <div class="deadline-pill">📅 Book 45+ days in advance</div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🏨 Lodging</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <ul class="policy-list">
-          <li>Lodging rates <strong>cannot exceed</strong> the designated meeting hotel rate.</li>
-          <li>Clinical year residents presenting research: lodging limited to <strong>2 consecutive nights maximum</strong>.</li>
-          <li>Research residents presenting: more than 2 nights requires <strong>PI/Mentor approval</strong>.</li>
-          <li>If multiple residents attend the same meeting, they should <strong>share rooms</strong> when possible and appropriate.</li>
-          <li>Additional hotel nights for personal extensions will <strong>not</strong> be covered.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🍽️ Meals &amp; Per Diem</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <div class="alert navy"><div class="alert-icon">ℹ️</div> Per Diem is processed through the <strong>Workday expense system</strong>.</div>
-        <ul class="policy-list">
-          <li>Travel meals reimbursed using the <strong>Per Diem meal allowance</strong> in Workday.</li>
-          <li>Meals provided by the conference <strong>must be excluded</strong> from reimbursement.</li>
-          <li><strong>Group meals will not be reimbursed.</strong> Each traveler pays their own expenses.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🚗 Transportation</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <ul class="policy-list">
-          <li>Uber/Lyft/taxi is reimbursable for home ↔ airport and airport ↔ conference hotel.</li>
-          <li>Airport parking is reimbursable — submit receipts.</li>
-          <li>Transportation costs for personal trip extensions will <strong>not</strong> be covered.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🎟️ Registration Fees</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <ul class="policy-list">
-          <li>Registration fees are limited to <strong>early and/or trainee registration rates</strong>.</li>
-          <li>The trainee is personally responsible for any cost difference between early and late registration rates.</li>
-        </ul>
-        <div class="alert orange"><div class="alert-icon">⚠️</div> Register early! Late registration surcharges are <strong>your responsibility</strong>.</div>
-      </div>
-    </div>
-
+    <div class="policy-card open"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">✈️ Flights &amp; Booking</div><span class="chevron">▼</span></div><div class="policy-card-body"><div class="alert red"><div class="alert-icon">🚫</div><div>Travel will <strong>not be allowed</strong> if requested fewer than 2 weeks before departure (unless approved by Program Director or PI).</div></div><ul class="policy-list"><li>All travel must be booked <strong>at least 45 days prior</strong> to departure.</li><li>Clinical resident travel is booked by <strong>program coordinators</strong>.</li><li>Research resident travel is booked by the <strong>administrative assistant for the Division of Surgical Science</strong>.</li><li>Flight change charges will <strong>not</strong> be reimbursed unless approved by the Program Director.</li><li>If you extend a trip personally, you must attach a cost comparison of compliant vs. personal-stay flights to your expense report.</li></ul><div class="deadline-pill">📅 Book 45+ days in advance</div></div></div>
+    <div class="policy-card"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🏨 Lodging</div><span class="chevron">▼</span></div><div class="policy-card-body"><ul class="policy-list"><li>Lodging rates <strong>cannot exceed</strong> the designated meeting hotel rate.</li><li>Clinical year residents presenting research: lodging limited to <strong>2 consecutive nights maximum</strong> (exceptions by Program Director only).</li><li>Research residents presenting: more than 2 nights requires <strong>PI/Mentor approval</strong>.</li><li>If multiple residents attend the same meeting, they should <strong>share rooms</strong> when possible and appropriate.</li><li>Additional hotel nights for personal extensions will <strong>not</strong> be covered.</li></ul></div></div>
+    <div class="policy-card"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🍽️ Meals &amp; Per Diem</div><span class="chevron">▼</span></div><div class="policy-card-body"><div class="alert navy"><div class="alert-icon">ℹ️</div> Per Diem is processed through the <strong>Workday expense system</strong>. Claim the daily rate for days you are traveling.</div><ul class="policy-list"><li>Travel meals reimbursed using the <strong>Per Diem meal allowance</strong> in Workday.</li><li>Meals provided by the conference <strong>must be excluded</strong> from reimbursement.</li><li>Per Diem covers all meals, coffee, and snacks for that day.</li><li><strong>Group meals will not be reimbursed.</strong> Each traveler pays their own expenses.</li></ul></div></div>
+    <div class="policy-card"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🚗 Transportation</div><span class="chevron">▼</span></div><div class="policy-card-body"><ul class="policy-list"><li>Uber/Lyft/taxi is reimbursable for home ↔ airport and airport ↔ conference hotel.</li><li>Airport parking is reimbursable — submit receipts.</li><li>Transportation costs for personal trip extensions will <strong>not</strong> be covered.</li></ul></div></div>
+    <div class="policy-card"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🎟️ Registration Fees</div><span class="chevron">▼</span></div><div class="policy-card-body"><ul class="policy-list"><li>Registration fees are limited to <strong>early and/or trainee registration rates</strong>.</li><li>The trainee is personally responsible for any cost difference between early and late registration rates.</li></ul><div class="alert orange"><div class="alert-icon">⚠️</div> Register early! Late registration surcharges are <strong>your responsibility</strong>.</div></div></div>
     <div class="section-title">Receipts &amp; Reimbursement</div>
-    <div class="policy-card open">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🧾 Submitting Receipts</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <div class="alert green"><div class="alert-icon">✅</div><div> Because flights, hotels, and conference registration are booked by the Department, <strong>the main receipts you need to submit</strong> are: airport parking, and transportation to/from airport and hotel.</div></div>
-        <ul class="policy-list">
-          <li>Submit receipts to the designated Surgery Department representative within <strong>25 days</strong> of your return date.</li>
-          <li>If you extended your trip personally, include a cost comparison of compliant vs. extended-stay travel.</li>
-        </ul>
-        <div class="deadline-pill">📅 Submit within 25 days of return</div>
-      </div>
-    </div>
-
+    <div class="policy-card open"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🧾 Submitting Receipts</div><span class="chevron">▼</span></div><div class="policy-card-body"><div class="alert green"><div class="alert-icon">✅</div><div>Because flights, hotels, and conference registration are booked by the Department, <strong>the main receipts you need to submit</strong> are: airport parking, and transportation to/from airport and hotel.</div></div><ul class="policy-list"><li>Submit receipts to the designated Surgery Department representative within <strong>25 days</strong> of your return date.</li><li>If you extended your trip personally, include a cost comparison of compliant vs. extended-stay travel.</li></ul><div class="deadline-pill">📅 Submit within 25 days of return</div></div></div>
     <div class="section-title">Weather &amp; Disruptions</div>
-    <div class="alert navy" style="margin-top:0">
-      <div class="alert-icon">🌩️</div>
-      <div>If weather threatens major disruptions and airlines/hotels offer waivers, make every reasonable effort to return home early — <strong>unless you have not yet presented</strong>.</div>
-    </div>
-
+    <div class="alert navy" style="margin-top:0"><div class="alert-icon">🌩️</div><div>If weather threatens major disruptions and airlines/hotels offer waivers, make every reasonable effort to return home early — <strong>unless you have not yet presented</strong>.</div></div>
     <div class="section-title">Personal Extensions</div>
-    <div class="alert red">
-      <div class="alert-icon">🚫</div>
-      <div>If you elect to extend a trip for personal reasons, <strong>no additional costs</strong> will be covered — including airfare difference, change fees, extra hotel nights, or other related expenses.</div>
-    </div>
+    <div class="alert red"><div class="alert-icon">🚫</div><div>If you elect to extend a trip for personal reasons, <strong>no additional costs</strong> will be covered — including airfare difference, change fees, extra hotel nights, or other related expenses.</div></div>
   </section>
 
-  <!-- INTERNATIONAL TRAVEL -->
   <section class="section" id="intl">
-    <div class="hero">
-      <div class="hero-label">Compliance &amp; Safety</div>
-      <h1>International Travel</h1>
-      <p>All residents and fellows planning university-related international travel must comply with UVA registration, export control, and security requirements before departing.</p>
-    </div>
-
+    <div class="hero"><div class="hero-label">Compliance &amp; Safety</div><h1>International Travel</h1><p>All residents and fellows planning university-related international travel must comply with UVA registration, export control, and security requirements before departing.</p></div>
     <div class="section-title">Register International Travel</div>
-
-    <div class="policy-card open">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🌐 Student &amp; GME International Travel Registry</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <p style="font-size:14px;color:#374151;line-height:1.65;margin-top:14px;">
-          For Students: Report upcoming <strong>"University-Related International Travel"</strong> in the
-          <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XoXweca5VQYNNsQ-PGXp-8QtBmSFqC4eh56YCtO5ZTLIdNgKGlbB4Wp6AAqOXp8zuWM0tynamvbYArFZ_xTv1ClsBIDHCfbRc8n" target="_blank" style="color:var(--orange);font-weight:600;">UVA Student &amp; GME International Travel Registry</a>.
-          Registration requires enrollment in the University's international health and emergency assistance insurance plan through CISI. See
-          <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XoYN10ltSD_bYYy4H9DUobPwkr51ijBNHGoICDNiOwGyiC2XWzN2REHBq902aLYc_bjF85jyetqd1tXUbjGaZ64TCCg6d63vM7C" target="_blank" style="color:var(--orange);font-weight:600;">PROV-010, Student and Graduate Medical Education Trainee International Travel</a>
-          for definitions and additional information.
-        </p>
-      </div>
-    </div>
-
+    <div class="policy-card open"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🌐 Student &amp; GME International Travel Registry</div><span class="chevron">▼</span></div><div class="policy-card-body"><p style="font-size:14px;color:#374151;line-height:1.65;margin-top:14px;">For Students: Report upcoming <strong>"University-Related International Travel"</strong> in the <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XoXweca5VQYNNsQ-PGXp-8QtBmSFqC4eh56YCtO5ZTLIdNgKGlbB4Wp6AAqOXp8zuWM0tynamvbYArFZ_xTv1ClsBIDHCfbRc8n" target="_blank" style="color:var(--orange);font-weight:600;">UVA Student &amp; GME International Travel Registry</a>. Registration requires enrollment in CISI insurance. See <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XoYN10ltSD_bYYy4H9DUobPwkr51ijBNHGoICDNiOwGyiC2XWzN2REHBq902aLYc_bjF85jyetqd1tXUbjGaZ64TCCg6d63vM7C" target="_blank" style="color:var(--orange);font-weight:600;">PROV-010</a> for additional information.</p></div></div>
     <div class="section-title">Compliance Requirements</div>
-
-    <div class="policy-card open">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">📦 Comply with Export Controls</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <p style="font-size:14px;color:#374151;line-height:1.65;margin-top:14px;">
-          Taking or accessing UVA <strong>"Controlled Technology"</strong> outside of the U.S., even temporarily, is an export. Violations can be inadvertent and may result from everyday activities such as traveling with devices, shipping materials, or emailing certain types of technical information. Avoid inadvertent violations by submitting a
-          <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XoZ79Lv5GDZRc2B3V2FpGHh4hOyYNnxsagCMwAs-dgx4RiCD9tLtFtnc2hdD0Db2cUthux2L7VU6HYfNuj0vQUszgwU0Uhjd7jT" target="_blank" style="color:var(--orange);font-weight:600;">Temporary Export Request Form</a>
-          (form behind Netbadge) to the Office of Research Security (ORS), Export Controls Program prior to travel. See
-          <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-Xoa2nUfywdHWiscaaXoG6JyE-k4UG5ExDGT5v-OhdRmCAPjWqLxrXo4FZlSzaZMRYqpcE5zpyu85PXvImTa1JGnPVr0IpQ8_0lE" target="_blank" style="color:var(--orange);font-weight:600;">FIN-043, Managing Export and Sanction Compliance in Support of University Activities</a>
-          for definitions and additional information. Contact the Office of Research Security at
-          <a href="mailto:export-controls@virginia.edu" style="color:var(--orange);font-weight:600;">export-controls@virginia.edu</a>.
-        </p>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">💻 Safeguard Digital Resources</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <p style="font-size:14px;color:#374151;line-height:1.65;margin-top:14px;">
-          Take steps to safeguard your devices and University data during travel. See
-          <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-Xob23-tM4cMl2zKLND4gTw75Tkk7gjFIHGLYuSx0uT5c5BFAlC3KgtMfolMUn13gFIouK_TpFQh2shGYpgl1XKrP3bQXF6cYabW" target="_blank" style="color:var(--orange);font-weight:600;">Best Practices for Traveling Internationally</a>
-          (UVA Information Security) and
-          <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XocBLRwZIBmHmbYgl2Oa1blasUb2UnvnWI9CWI_wN_ltjIJTYWKQPrI35amUykNtZkx_dmBYNQXGt0-0rkeNZXdLjiheBhEZ5Xv" target="_blank" style="color:var(--orange);font-weight:600;">Travel Tips</a>
-          (U.S. Director of National Intelligence). Consult your Local Support Partner (LSP) (<a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XodFJjAWXEXUt04aRztr_VFQwp1K3RavKhh6dcXT9AiHdM2Y0YiZ3FlpWbKXp72uPNbZ89mwv4IJiOKlG5IgXH1iR-ynAsohTV3" target="_blank" style="color:var(--orange);font-weight:600;">list behind Netbadge</a>) and/or UVA Information Security for specific guidance.
-        </p>
-        <div class="alert navy" style="margin-top:14px;">
-          <div class="alert-icon">ℹ️</div>
-          <div>The same precautions are advised when visiting a foreign embassy in the U.S.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="policy-card-header" onclick="toggleCard(this)">
-        <div class="policy-card-title">🌍 Applicability of Sanctions</div>
-        <span class="chevron">▼</span>
-      </div>
-      <div class="policy-card-body">
-        <p style="font-size:14px;color:#374151;line-height:1.65;margin-top:14px;">
-          The U.S. and international partners have established sanction programs that apply to certain activities of academic and research travelers, including remote work and access to UVA IT systems from those countries. Consult with the Office of Research Security, Export Controls Program
-          (<a href="mailto:export-controls@virginia.edu" style="color:var(--orange);font-weight:600;">export-controls@virginia.edu</a>)
-          prior to engaging in any University activities in or from a comprehensively sanctioned country or region. See
-          <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XoepSCJSChHom_QKU9OXGC4DhPPwahUDQ-KpJS0JdUm4SfMJXJKJwz-zM0p0NvH7tUY8Aiagctez1LQCmDS-5xoXUfPgXYjG0F_" target="_blank" style="color:var(--orange);font-weight:600;">FIN-043, Managing Export and Sanction Compliance</a>
-          for definitions and additional information.
-        </p>
-      </div>
-    </div>
-
+    <div class="policy-card open"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">📦 Comply with Export Controls</div><span class="chevron">▼</span></div><div class="policy-card-body"><p style="font-size:14px;color:#374151;line-height:1.65;margin-top:14px;">Taking or accessing UVA <strong>"Controlled Technology"</strong> outside of the U.S. is an export. Submit a <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-XoZ79Lv5GDZRc2B3V2FpGHh4hOyYNnxsagCMwAs-dgx4RiCD9tLtFtnc2hdD0Db2cUthux2L7VU6HYfNuj0vQUszgwU0Uhjd7jT" target="_blank" style="color:var(--orange);font-weight:600;">Temporary Export Request Form</a> to ORS prior to travel. Contact <a href="mailto:export-controls@virginia.edu" style="color:var(--orange);font-weight:600;">export-controls@virginia.edu</a>.</p></div></div>
+    <div class="policy-card"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">💻 Safeguard Digital Resources</div><span class="chevron">▼</span></div><div class="policy-card-body"><p style="font-size:14px;color:#374151;line-height:1.65;margin-top:14px;">Take steps to safeguard your devices and University data during travel. See <a href="http://click.massmail.virginia.edu/?qs=ABB7InYiOjEsImQiOjQ4NzN9AAoAAAAAAMZ1-Xob23-tM4cMl2zKLND4gTw75Tkk7gjFIHGLYuSx0uT5c5BFAlC3KgtMfolMUn13gFIouK_TpFQh2shGYpgl1XKrP3bQXF6cYabW" target="_blank" style="color:var(--orange);font-weight:600;">Best Practices for Traveling Internationally</a> (UVA Information Security). Consult your LSP and UVA Information Security for specific guidance.</p><div class="alert navy" style="margin-top:14px;"><div class="alert-icon">ℹ️</div><div>The same precautions are advised when visiting a foreign embassy in the U.S.</div></div></div></div>
+    <div class="policy-card"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">🌍 Applicability of Sanctions</div><span class="chevron">▼</span></div><div class="policy-card-body"><p style="font-size:14px;color:#374151;line-height:1.65;margin-top:14px;">U.S. sanction programs apply to certain academic and research travel activities. Consult with ORS Export Controls (<a href="mailto:export-controls@virginia.edu" style="color:var(--orange);font-weight:600;">export-controls@virginia.edu</a>) prior to engaging in any University activities in or from a comprehensively sanctioned country.</p></div></div>
     <div class="section-title">Important Notice for Non-U.S. Citizens</div>
-
-    <div class="alert red">
-      <div class="alert-icon">⚠️</div>
-      <div style="font-size:14px;line-height:1.65;">
-        Non-U.S. citizens should carefully consider the risks they may face from heightened immigration enforcement at the border when returning to the U.S. While no UVA international faculty, staff, or students returning from abroad have reported any serious problems upon re-entering the U.S. so far this year, the federal government has indicated it is scrutinizing international travelers' expressive activity, including on social media, with a view to whether it threatens U.S. foreign policy goals, as well as their compliance with all immigration regulations, before deciding to admit them at the border.
-        <br><br>
-        Additionally, we encourage <strong>F/J visa holders</strong> to carefully consider international travel plans, as the proposed DHS rule to end <strong>"Duration of Status"</strong> is expected to be published soon and could impact students returning to the U.S. for the fall semester. The rule would replace the Form I-94 "admit until date" from Duration of Status with a fixed end date aligning with the program end date or four years, whichever is shorter.
-        <br><br>
-        Thank you for your cooperation related to these important safety and compliance protocols.
-      </div>
-    </div>
+    <div class="alert red"><div class="alert-icon">⚠️</div><div style="font-size:14px;line-height:1.65;">Non-U.S. citizens should carefully consider the risks they may face from heightened immigration enforcement at the border when returning to the U.S. The federal government has indicated it is scrutinizing international travelers' expressive activity, including on social media, as well as their compliance with all immigration regulations.<br><br>We encourage <strong>F/J visa holders</strong> to carefully consider international travel plans, as the proposed DHS rule to end <strong>"Duration of Status"</strong> may impact students returning to the U.S. for the fall semester.</div></div>
   </section>
 
-  <!-- PROCESS -->
   <section class="section" id="process">
-    <div class="hero">
-      <div class="hero-label">Step-by-Step</div>
-      <h1>Travel Approval Process</h1>
-      <p>Follow these steps in order before booking any travel. Missing a step may delay or deny your reimbursement.</p>
-    </div>
-
+    <div class="hero"><div class="hero-label">Step-by-Step</div><h1>Travel Approval Process</h1><p>Follow these steps in order before booking any travel. Missing a step may delay or deny your reimbursement.</p></div>
     <div class="section-title">Approval Workflow</div>
-
     <div class="timeline">
       <div class="timeline-item"><div class="timeline-dot">1</div><div class="timeline-content"><strong>Discuss with PI (if presenting research)</strong><span>Confirm abstract plans and available funding with your PI before any submission.</span></div></div>
       <div class="timeline-item"><div class="timeline-dot">2</div><div class="timeline-content"><strong>Get PI approval on abstract</strong><span>All abstracts must be reviewed and approved by the PI prior to submission to the conference.</span></div></div>
       <div class="timeline-item"><div class="timeline-dot">3</div><div class="timeline-content"><strong>Submit travel application to Program Coordinator</strong><span>Complete the travel application before booking anything.</span></div></div>
       <div class="timeline-item"><div class="timeline-dot">4</div><div class="timeline-content"><strong>Program Director + Scheduling Chief approval</strong><span>Clinical residents need PD and Scheduling Chief sign-off to ensure all clinical responsibilities are covered.</span></div></div>
-      <div class="timeline-item"><div class="timeline-dot">5</div><div class="timeline-content"><strong>Travel is booked by the department</strong><span>Do not book your own flights or hotel — the program coordinator (clinical) or Division of Surgical Science admin (research) books on your behalf.</span></div></div>
+      <div class="timeline-item"><div class="timeline-dot">5</div><div class="timeline-content"><strong>Travel is booked by the department</strong><span>Do not book your own flights or hotel. The program coordinator (clinical) or Division of Surgical Science admin (research) books on your behalf.</span></div></div>
       <div class="timeline-item"><div class="timeline-dot">6</div><div class="timeline-content"><strong>Travel &amp; keep receipts</strong><span>Save receipts for airport parking and all transportation to/from airport and hotel.</span></div></div>
       <div class="timeline-item"><div class="timeline-dot">7</div><div class="timeline-content"><strong>Submit receipts within 25 days of return</strong><span>Forward receipts and Workday Per Diem claim to the designated Surgery Department representative.</span></div></div>
     </div>
-
-    <div style="margin-top:28px;">
-      <div class="section-title">Key Deadlines</div>
-      <div class="policy-card open">
-        <div class="policy-card-header" onclick="toggleCard(this)">
-          <div class="policy-card-title">⏱️ Critical Timelines</div>
-          <span class="chevron">▼</span>
-        </div>
-        <div class="policy-card-body">
-          <ul class="policy-list">
-            <li><strong>45 days before travel:</strong> Travel must be booked by this date.</li>
-            <li><strong>14 days before travel:</strong> Minimum lead time to even request travel.</li>
-            <li><strong>25 days after return:</strong> Receipt submission deadline.</li>
-            <li><strong>Early registration deadline:</strong> Register before this — late fees are your responsibility.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div style="margin-top:28px;"><div class="section-title">Key Deadlines</div><div class="policy-card open"><div class="policy-card-header" onclick="toggleCard(this)"><div class="policy-card-title">⏱️ Critical Timelines</div><span class="chevron">▼</span></div><div class="policy-card-body"><ul class="policy-list"><li><strong>45 days before travel:</strong> Travel must be booked by this date.</li><li><strong>14 days before travel:</strong> Minimum lead time to even request travel.</li><li><strong>25 days after return:</strong> Receipt submission deadline.</li><li><strong>Early registration deadline:</strong> Register before this — late fees are your responsibility.</li></ul></div></div></div>
   </section>
 
-  <!-- CONTACTS -->
   <section class="section" id="contacts">
-    <div class="hero">
-      <div class="hero-label">Program Coordinators</div>
-      <h1>Who to Contact</h1>
-      <p>Reach out to the coordinator for your program with questions about travel applications, booking, or reimbursements.</p>
-    </div>
-
+    <div class="hero"><div class="hero-label">Program Coordinators</div><h1>Who to Contact</h1><p>Reach out to the coordinator for your program with questions about travel applications, booking, or reimbursements.</p></div>
     <div class="section-title">Program Coordinators by Division</div>
     <div class="contacts-grid">
-      <div class="contact-card">
-        <div class="contact-area">General Surgery</div>
-        <div class="contact-name multi"><a href="mailto:aca9su@uvahealth.org">Erin Muhleisen</a></div>
-        <div style="margin-top:4px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=aca9su@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;transition:background 0.15s;" onmouseover="this.style.background='var(--orange)';this.style.color='white';this.style.borderColor='var(--orange)'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)';this.style.borderColor='var(--border)'">✉ Open in Outlook</a></div>
-        <div class="contact-name multi" style="margin-top:10px;"><a href="mailto:kdd3k@uvahealth.org">Kristen Dudley</a></div>
-        <div style="margin-top:4px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=kdd3k@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;transition:background 0.15s;" onmouseover="this.style.background='var(--orange)';this.style.color='white';this.style.borderColor='var(--orange)'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)';this.style.borderColor='var(--border)'">✉ Open in Outlook</a></div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-area">Thoracic</div>
-        <div class="contact-name"><a href="mailto:wam4tp@uvahealth.org">Breana Rose</a></div>
-        <div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=wam4tp@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;transition:background 0.15s;" onmouseover="this.style.background='var(--orange)';this.style.color='white';this.style.borderColor='var(--orange)'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)';this.style.borderColor='var(--border)'">✉ Open in Outlook</a></div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-area">Vascular</div>
-        <div class="contact-name"><a href="mailto:hms5g@uvahealth.org">Heather Trainum</a></div>
-        <div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=hms5g@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;transition:background 0.15s;" onmouseover="this.style.background='var(--orange)';this.style.color='white';this.style.borderColor='var(--orange)'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)';this.style.borderColor='var(--border)'">✉ Open in Outlook</a></div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-area">Transplant</div>
-        <div class="contact-name"><a href="mailto:mlm8m@uvahealth.org">Lynn Good</a></div>
-        <div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=mlm8m@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;transition:background 0.15s;" onmouseover="this.style.background='var(--orange)';this.style.color='white';this.style.borderColor='var(--orange)'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)';this.style.borderColor='var(--border)'">✉ Open in Outlook</a></div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-area">Research</div>
-        <div class="contact-name"><a href="mailto:mjf6e@virginia.edu">Michael Freeman</a></div>
-        <div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=mjf6e@virginia.edu" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;transition:background 0.15s;" onmouseover="this.style.background='var(--orange)';this.style.color='white';this.style.borderColor='var(--orange)'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)';this.style.borderColor='var(--border)'">✉ Open in Outlook</a></div>
-      </div>
+      <div class="contact-card"><div class="contact-area">General Surgery</div><div class="contact-name multi"><a href="mailto:aca9su@uvahealth.org">Erin Muhleisen</a></div><div style="margin-top:4px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=aca9su@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;" onmouseover="this.style.background='var(--orange)';this.style.color='white'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)'">✉ Open in Outlook</a></div><div class="contact-name multi" style="margin-top:10px;"><a href="mailto:kdd3k@uvahealth.org">Kristen Dudley</a></div><div style="margin-top:4px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=kdd3k@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;" onmouseover="this.style.background='var(--orange)';this.style.color='white'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)'">✉ Open in Outlook</a></div></div>
+      <div class="contact-card"><div class="contact-area">Thoracic</div><div class="contact-name"><a href="mailto:wam4tp@uvahealth.org">Breana Rose</a></div><div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=wam4tp@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;" onmouseover="this.style.background='var(--orange)';this.style.color='white'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)'">✉ Open in Outlook</a></div></div>
+      <div class="contact-card"><div class="contact-area">Vascular</div><div class="contact-name"><a href="mailto:hms5g@uvahealth.org">Heather Trainum</a></div><div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=hms5g@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;" onmouseover="this.style.background='var(--orange)';this.style.color='white'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)'">✉ Open in Outlook</a></div></div>
+      <div class="contact-card"><div class="contact-area">Transplant</div><div class="contact-name"><a href="mailto:mlm8m@uvahealth.org">Lynn Good</a></div><div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=mlm8m@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;" onmouseover="this.style.background='var(--orange)';this.style.color='white'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)'">✉ Open in Outlook</a></div></div>
+      <div class="contact-card"><div class="contact-area">Research</div><div class="contact-name"><a href="mailto:mjf6e@virginia.edu">Michael Freeman</a></div><div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=mjf6e@virginia.edu" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;" onmouseover="this.style.background='var(--orange)';this.style.color='white'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)'">✉ Open in Outlook</a></div></div>
     </div>
-
-    <div style="margin-top:28px;">
-      <div class="section-title">Funding Contacts</div>
-      <div class="contacts-grid">
-        <div class="contact-card">
-          <div class="contact-area">Funding</div>
-          <div class="contact-name"><a href="mailto:dmj2h@uvahealth.org">Doug Johnson</a></div>
-          <div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=dmj2h@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;transition:background 0.15s;" onmouseover="this.style.background='var(--orange)';this.style.color='white';this.style.borderColor='var(--orange)'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)';this.style.borderColor='var(--border)'">✉ Open in Outlook</a></div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-area">Funding</div>
-          <div class="contact-name"><a href="mailto:wml4t@virginia.edu">Whitney McClendon</a></div>
-          <div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=wml4t@virginia.edu" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;transition:background 0.15s;" onmouseover="this.style.background='var(--orange)';this.style.color='white';this.style.borderColor='var(--orange)'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)';this.style.borderColor='var(--border)'">✉ Open in Outlook</a></div>
-        </div>
-      </div>
-    </div>
+    <div style="margin-top:28px;"><div class="section-title">Funding Contacts</div><div class="contacts-grid">
+      <div class="contact-card"><div class="contact-area">Funding</div><div class="contact-name"><a href="mailto:dmj2h@uvahealth.org">Doug Johnson</a></div><div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=dmj2h@uvahealth.org" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;" onmouseover="this.style.background='var(--orange)';this.style.color='white'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)'">✉ Open in Outlook</a></div></div>
+      <div class="contact-card"><div class="contact-area">Funding</div><div class="contact-name"><a href="mailto:wml4t@virginia.edu">Whitney McClendon</a></div><div style="margin-top:6px;"><a href="https://outlook.office.com/mail/deeplink/compose?to=wml4t@virginia.edu" target="_blank" style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--navy);text-decoration:none;background:var(--cream-dark);border:1px solid var(--border);padding:4px 10px;border-radius:20px;" onmouseover="this.style.background='var(--orange)';this.style.color='white'" onmouseout="this.style.background='var(--cream-dark)';this.style.color='var(--navy)'">✉ Open in Outlook</a></div></div>
+    </div></div>
   </section>
 
-  <!-- FORM -->
   <section class="section" id="form">
-    <div class="hero">
-      <div class="hero-label">Traveler Information</div>
-      <h1>Resident Travel Information Form</h1>
-      <p>The Resident Travel Information form will provide your coordinator with important traveler information that will enable easier booking of flights and hotels for the resident.</p>
-    </div>
-    <div style="background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-      <iframe width="1280px" height="960px" src="https://forms.cloud.microsoft/r/TY34qrL7SC" frameborder="0" marginwidth="0" marginheight="0" style="border:none;display:block;max-width:100%;max-height:100vh;" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
-    </div>
+    <div class="hero"><div class="hero-label">Traveler Information</div><h1>Resident Travel Information Form</h1><p>The Resident Travel Information form will provide your coordinator with important traveler information that will enable easier booking of flights and hotels for the resident.</p></div>
+    <div style="background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;"><iframe width="1280px" height="960px" src="https://forms.cloud.microsoft/r/TY34qrL7SC" frameborder="0" marginwidth="0" marginheight="0" style="border:none;display:block;max-width:100%;max-height:100vh;" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe></div>
   </section>
 
-  <!-- POLICY DOCUMENT -->
   <section class="section" id="policy-doc">
-    <div class="hero">
-      <div class="hero-label">Official Policy</div>
-      <h1>University of Virginia Department of Surgery</h1>
-      <p style="font-family:'Libre Baskerville', serif; font-size:18px; color:rgba(255,255,255,0.92); margin-bottom:10px; font-weight:700;">Categorical Resident Travel Policy</p>
-      <p>Version 2026-05 · Review the full policy document below. Use the button to download a copy for your records.</p>
-    </div>
+    <div class="hero"><div class="hero-label">Official Policy</div><h1>University of Virginia Department of Surgery</h1><p style="font-family:'Libre Baskerville', serif; font-size:18px; color:rgba(255,255,255,0.92); margin-bottom:10px; font-weight:700;">Categorical Resident Travel Policy</p><p>Version 2026-05 · Review the full policy document below. Use the button to download a copy for your records.</p></div>
     <div style="display:flex;justify-content:flex-end;margin-bottom:14px;">
-      <a download="Surgery_Resident_Travel_Policy_2026-05.pdf" href="Surgery_Resident_Travel_policy_eff_2026-05_Final.pdf" style="display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:white;text-decoration:none;padding:10px 20px;border-radius:7px;font-size:14px;font-weight:600;white-space:nowrap;transition:background 0.2s;" onmouseover="this.style.background='var(--orange)'" onmouseout="this.style.background='var(--navy)'">⬇ Download Policy PDF</a>
+      <a id="policy-download-link" download="Surgery_Resident_Travel_Policy_2026-05.pdf" href="#" style="display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:white;text-decoration:none;padding:10px 20px;border-radius:7px;font-size:14px;font-weight:600;white-space:nowrap;transition:background 0.2s;" onmouseover="this.style.background='var(--orange)'" onmouseout="this.style.background='var(--navy)'">⬇ Download Policy PDF</a>
     </div>
     <div style="background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(35,45,75,0.08);">
-      <iframe src="Surgery_Resident_Travel_policy_eff_2026-05_Final.pdf" width="100%" style="display:block;min-height:820px;border:none;">
-        <p style="padding:32px;text-align:center;color:var(--text-muted);font-size:15px;">Your browser does not support inline PDF viewing. <a href="Surgery_Resident_Travel_policy_eff_2026-05_Final.pdf" style="color:var(--orange);font-weight:600;">Download Policy PDF</a></p>
+      <iframe id="policy-iframe" src="about:blank" width="100%" style="display:block;min-height:820px;border:none;">
+        <p style="padding:32px;text-align:center;color:var(--text-muted);font-size:15px;">Your browser does not support inline PDF viewing. <a href="#" onclick="ensurePolicyPdf();return false;" style="color:var(--orange);font-weight:600;">Download Policy PDF</a></p>
       </iframe>
     </div>
   </section>
-
 </main>
 
+<script src="pdfs.js"></script>
 <script>
+  function b64toBlob(b64) {
+    const bytes = atob(b64);
+    const buf = new Uint8Array(bytes.length);
+    for (let i = 0; i < bytes.length; i++) buf[i] = bytes.charCodeAt(i);
+    return URL.createObjectURL(new Blob([buf], {type:'application/pdf'}));
+  }
+  let policyLoaded = false;
+  function ensurePolicyPdf() {
+    if (policyLoaded) return;
+    policyLoaded = true;
+    const url = b64toBlob(POLICY_PDF);
+    document.getElementById('policy-iframe').src = url;
+    const dl = document.getElementById('policy-download-link');
+    if (dl) dl.href = url;
+  }
   function showSection(id) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    document.querySelector(`[data-section="${id}"]`).classList.add('active');
+    document.querySelector('[data-section="' + id + '"]').classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (id === 'policy-doc') ensurePolicyPdf();
   }
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => showSection(tab.dataset.section));
   });
-  function toggleCard(header) {
-    header.parentElement.classList.toggle('open');
-  }
+  function toggleCard(header) { header.parentElement.classList.toggle('open'); }
+  window.addEventListener('DOMContentLoaded', function() {
+    const appUrl = b64toBlob(APP_FORM_PDF);
+    const link = document.getElementById('app-download-link');
+    if (link) link.href = appUrl;
+  });
 </script>
 </body>
 </html>

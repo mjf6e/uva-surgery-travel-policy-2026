@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 250" width="460" height="250">
+  <circle cx="230" cy="88" r="82" fill="#232D4B"/>
+  <path d="M230 42
+           c-26 0-47 21-47 47
+           c0 35 47 78 47 78
+           s47-43 47-78
+           c0-26-21-47-47-47z"
+        fill="#E57200"/>
+  <circle cx="230" cy="89" r="20" fill="#232D4B"/>
+  <text x="230" y="212" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34">
+    <tspan fill="#232D4B">TRAVEL</tspan><tspan fill="#E57200">UVA</tspan>
+  </text>
+</svg>
